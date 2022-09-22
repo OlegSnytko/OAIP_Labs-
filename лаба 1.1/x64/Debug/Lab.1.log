@@ -1,0 +1,5 @@
+﻿  Laba1.1.c
+C:\Users\olegs\OneDrive\Рабочий стол\ЛАБА№ 1. progects\лаба 1.1\Laba1.1.c(14,9): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\olegs\OneDrive\Рабочий стол\ЛАБА№ 1. progects\лаба 1.1\Laba1.1.c(15,9): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\olegs\OneDrive\Рабочий стол\ЛАБА№ 1. progects\лаба 1.1\Laba1.1.c(16,29): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Lab.1.vcxproj -> C:\Users\olegs\OneDrive\Рабочий стол\ЛАБА№ 1. progects\лаба 1.1\x64\Debug\Lab.1.exe
