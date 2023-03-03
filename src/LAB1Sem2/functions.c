@@ -6,7 +6,7 @@
 char *const colorToStr[] = {"black", "white", "yellow"};
 
 void scan(int *symbol) {
-    while (scanf("%d", symbol) != 1 || symbol <= 0 || getchar() != '\n') {
+    while (scanf_s("%d", symbol) != 1 || symbol <= 0 || getchar() != '\n') {
         printf("Wrong input. Try again: ");
         rewind(stdin);
     }
@@ -32,8 +32,6 @@ void scanMass(char **mass) {
 }
 
 void inputCar(CAR *cars, int len) {
-    int amountOfModels;
-    int year;
     char *brand;
     char *country;
     for (int i = 0; i < len; i++) {
