@@ -5,7 +5,7 @@
 
 char *const colorToStr[] = {"black", "white", "yellow"};
 
-void scan(int *symbol) {
+void scan_s(int *symbol) {
     while (scanf("%d", symbol) != 1 || symbol <= 0 || getchar() != '\n') {
         printf("Wrong input. Try again: ");
         rewind(stdin);
