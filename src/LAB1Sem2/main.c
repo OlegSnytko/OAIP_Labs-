@@ -2,7 +2,8 @@
 #include "header.h"
 
 int main() {
-    int len = 0, index;
+    int len = 0;
+    int index = 0;
     printf("input number of car brands: ");
     scan(&len);
     CAR *cars;
