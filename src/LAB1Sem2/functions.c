@@ -13,7 +13,7 @@ void scan(int *symbol) {
 }
 
 int strLength(const char *str) {
-    int len = 0;
+    int len = 1;
     while (*(str + len) != '\0')
         len++;
     return len;
