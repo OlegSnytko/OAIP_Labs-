@@ -57,7 +57,7 @@ void inputCar(CAR *cars, int len) {
         }
         cars[i].brand = (char*)calloc(strLength(brand), sizeof(char));
         cars[i].brand = brand;
-        cars[i].country = calloc(strLength(country), sizeof(char));
+        cars[i].country = (char*)calloc(strLength(country), sizeof(char));
         cars[i].country = country;
         if (i != len - 1) {
             printf("next car:\n");
@@ -139,7 +139,7 @@ void menuFunction(CAR *cars, int len) {
     int choice;
     for (;;) {
         functionalityCheck(
-                "do you wanna sort with one 0f two parameters? 0 - by year, 1 - by num of models:(2 - another task) ",
+                "do you wanna sort with one 0f two parameters? 0 - by year, 1 - by num of models: ",
                 &choice, 0, 2);
         if (choice == 0) {
             quickSortYear(cars, 0, len);
@@ -152,7 +152,6 @@ void menuFunction(CAR *cars, int len) {
             printf("\n");
             printingTheStructure(cars, len);
         }
-        if (choice == 2) break;
         functionalityCheck("0 - to continue, 1 - to break: ", &choice, 0, 1);
         if (choice == 1) break;
         if (choice == 0) continue;
