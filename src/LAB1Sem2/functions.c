@@ -84,7 +84,8 @@ void functionalityCheck(char *string, int *param, int low, int high) {
 }
 
 void quickSortYear(CAR *cars, int left, int right) {
-    int i = left, j = right;
+    int i = left;
+    int j = right;
     CAR gap = cars[(left + right) / 2];
     do {
         while (cars[i].year < gap.year) {
@@ -110,7 +111,8 @@ void quickSortYear(CAR *cars, int left, int right) {
 }
 
 void quickSortAmountOfModels(CAR *cars, int left, int right) {
-    int i = left, j = right;
+    int i = left;
+    int j = right;
     CAR gap = cars[(left + right) / 2];
     do {
         while (cars[i].amountOfModels < gap.amountOfModels) {
@@ -136,7 +138,7 @@ void quickSortAmountOfModels(CAR *cars, int left, int right) {
 }
 
 void menuFunction(CAR *cars, int len) {
-    int choice;
+    int choice = 0;
     for (;;) {
         functionalityCheck(
                 "do you wanna sort with one 0f two parameters? 0 - by year, 1 - by num of models: ",
@@ -207,7 +209,8 @@ void bubbleSortForTwoFieldsLeft(CAR *cars, int len) {
 }
 
 void menuFunction2(CAR *cars, int len) {
-    int x, choice;
+    int x = 0; 
+    int choice = 0;
     for (;;) {
         functionalityCheck("do you wanna to continue the task? 0 - yes, 1 - no:(SORT BY 2 PARAM): ", &x, 0, 1);
         if (x == 1) break;
