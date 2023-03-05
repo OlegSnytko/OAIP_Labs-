@@ -55,7 +55,7 @@ void inputCar(CAR *cars, int len) {
             }
             break;
         }
-        cars[i].brand = calloc(strLength(brand), sizeof(char));
+        cars[i].brand = (char*)calloc(strLength(brand), sizeof(char));
         cars[i].brand = brand;
         cars[i].country = calloc(strLength(country), sizeof(char));
         cars[i].country = country;
