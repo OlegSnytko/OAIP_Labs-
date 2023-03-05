@@ -13,10 +13,10 @@ void scan(int *symbol) {
 }
 
 int strLength(const char *str) {
-    int len = 1;
+    int len = 0;
     while (*(str + len) != '\0')
         len++;
-    return len;
+    return len == 0 ? 1 : len;
 }
 
 void scanMass(char **mass) {
