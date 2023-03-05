@@ -48,8 +48,8 @@ void inputCar(CAR *cars, int len) {
             printf("Input color: ");
             scanf_s("%s", &string);
             if (strcmp(string, "white") == 0) cars[i].color = white;
-            else if (strcmp(string, "black") == 0) (cars)[i].color = black;
-            else if (strcmp(string, "yellow") == 0) (cars)[i].color = yellow;
+            else if (strcmp(string, "black") == 0) cars[i].color = black;
+            else if (strcmp(string, "yellow") == 0) cars[i].color = yellow;
             else {
                 continue;
             }
