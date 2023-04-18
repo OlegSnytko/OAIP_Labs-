@@ -189,9 +189,9 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
                 }
 
                 int index = ((y * width) + x) * bytesPerPixel;
-                imageData[index] = sumRed / count;
-                imageData[index + 1] = sumGreen / count;
-                imageData[index + 2] = sumBlue / count;
+                imageData[index] =(unsigned char)(sumRed / count);
+                imageData[index + 1] = (unsigned char)(sumGreen / count);
+                imageData[index + 2] = (unsigned char)(sumBlue / count);
             }
         }
         free(buffer);
