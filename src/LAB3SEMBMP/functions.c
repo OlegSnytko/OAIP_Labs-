@@ -159,7 +159,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
     }
 }
 
-    void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
+    void medianFilter(unsigned char *imageData, const BMPInfoHeader *infoHeader) {
 
         int width = infoHeader->width;
         int height = infoHeader->height;
