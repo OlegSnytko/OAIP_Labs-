@@ -74,7 +74,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
 
 }
 
-void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
+void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
 
     while (1) {
         double gamma;
