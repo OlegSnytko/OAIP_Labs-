@@ -8,6 +8,7 @@
 #include <string.h>
 #include <math.h>
 #define _CRT_SECURE_NO_WARNINGS
+
 typedef struct {
     unsigned char type[2];
     unsigned int size;
