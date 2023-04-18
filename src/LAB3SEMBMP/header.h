@@ -41,6 +41,6 @@ void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
 void gammaParam(double* gamma, char* string, double low, double high);
 void validationParam(char* string, int* param, int low, int high);
 void medianFilter(unsigned char *imageData, const BMPInfoHeader *infoHeader);
-void cycles(int x, int y, BMPInfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer);
+void cycles(int x, int y, const BMPInfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer);
 #endif //LAB3SEMBMP_HEADER_H
 
