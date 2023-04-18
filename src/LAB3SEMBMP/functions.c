@@ -186,7 +186,10 @@ void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfo
 
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
+                int sumRed = 0;
+                int sumGreen = 0;
+                int sumBlue = 0;
+                int count = 0;
                 for (int dy = -1; dy <= 1; dy++) {
                     for (int dx = -1; dx <= 1; dx++) {
                         int yy = y + dy;
