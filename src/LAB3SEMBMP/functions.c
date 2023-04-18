@@ -42,7 +42,7 @@ void validationParam(char* string, int* param, int low, int high){
     }
 }
 
-void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, const FILE* BMP, unsigned char *imageData, int imageSize) {
+void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, const FILE* BMP, const unsigned char *imageData, int imageSize) {
     if (BMP == NULL) {
         printf("Error: BMP file pointer is NULL.\n");
         return;
@@ -90,7 +90,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
 
 }
 
-void menu(unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
+void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
 
     while (1) {
         double gamma;
