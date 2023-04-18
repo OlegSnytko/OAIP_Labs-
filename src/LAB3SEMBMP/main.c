@@ -4,7 +4,7 @@ int main() {
 
     char fileName[100];
     printf("enter the name of file: ");
-    scanf_s("%s", fileName);
+    scanf("%s", fileName);
     FILE* BMP = fopen(fileName, "rb");
 
     if(!(BMP)){
