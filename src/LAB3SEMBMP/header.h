@@ -38,6 +38,6 @@ void menu(unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfoHeader
 void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
 void gammaParam(double* gamma, char* string, double low, double high);
 void validationParam(char* string, int* param, int low, int high);
-void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader);
+void medianFilter(const unsigned char *imageData, BMPInfoHeader *infoHeader);
 
 #endif //LAB3SEMBMP_HEADER_H
