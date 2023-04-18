@@ -12,6 +12,22 @@ void Is24Pixel(BMPInfoHeader infoHeader) {
     }
 }
 
+
+void validationFile(FILE* BMP, char* outFilename, unsigned char* mass) {
+    if (!BMP) {
+        printf("Failed to create file %s\n", outFilename);
+        free(mass);
+        return;
+    }
+}
+
+void allocateMemValid(unsigned const char* medianFilteredBMP) {
+    if (!medianFilteredBMP) {
+        printf("Memory allocation failed.\n");
+        return;
+    }
+}
+
 void validationParam(char* string, int* param, int low, int high){
     printf("%s", string);
     while(scanf_s("%d", param)!= 1 || getchar()!= '\n' || *param < low || *param > high){
@@ -26,7 +42,7 @@ void validationParam(char* string, int* param, int low, int high){
     }
 }
 
-void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, const FILE* BMP, const unsigned char *imageData, int imageSize) {
+void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, unsigned char *imageData, int imageSize) {
     if (BMP == NULL) {
         printf("Error: BMP file pointer is NULL.\n");
         return;
@@ -74,7 +90,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
 
 }
 
-void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
+void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
 
     while (1) {
         double gamma;
@@ -159,7 +175,7 @@ void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfo
     }
 }
 
-    void medianFilter(const unsigned char *imageData, BMPInfoHeader *infoHeader) {
+    void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
 
         int width = infoHeader->width;
         int height = infoHeader->height;
@@ -170,10 +186,7 @@ void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfo
 
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                int sumRed = 0;
-                int sumGreen = 0;
-                int sumBlue = 0;
-                int count = 0;
+                int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
                 for (int dy = -1; dy <= 1; dy++) {
                     for (int dx = -1; dx <= 1; dx++) {
                         int yy = y + dy;
@@ -196,7 +209,3 @@ void menu(const unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfo
         }
         free(buffer);
     }
-
-
-
-
