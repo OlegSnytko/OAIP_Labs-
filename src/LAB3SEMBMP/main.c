@@ -1,10 +1,11 @@
 
+
 #include "header.h"
 int main() {
 
     char fileName[100];
     printf("enter the name of file: ");
-    scanf("%s", fileName);
+    scanf_s("%s", fileName);
     FILE* BMP = fopen(fileName, "rb");
 
     if(!(BMP)){
@@ -29,11 +30,10 @@ int main() {
 
     unsigned char* imageData = (unsigned char*) malloc(imageSize * sizeof(unsigned char));
     fread(imageData, sizeof(unsigned char), imageSize, BMP);
-    
-    fclose(BMP);
-    
+
     menu(imageData, imageSize, BMP, infoHeader, header);
 
+    fclose(BMP);
     free(imageData);
 
     return 0;
