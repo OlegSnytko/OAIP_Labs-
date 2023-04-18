@@ -1,4 +1,0 @@
-C:\Users\olegs\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/olegs/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/bin/ninja/win/ninja.exe -G Ninja -S C:\LAB3SEMBMP -B C:\LAB3SEMBMP\cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: C:/LAB3SEMBMP/cmake-build-debug
