@@ -74,7 +74,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
 
 }
 
-void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
+int menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
 
     while (1) {
         double gamma;
@@ -157,6 +157,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
             exit(0);
         }
     }
+    return 0;
 }
 
     void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
