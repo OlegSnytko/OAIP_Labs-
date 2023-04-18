@@ -26,7 +26,7 @@ void validationParam(char* string, int* param, int low, int high){
     }
 }
 
-void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, unsigned char *imageData, int imageSize) {
+void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, const unsigned char *imageData, int imageSize) {
     if (BMP == NULL) {
         printf("Error: BMP file pointer is NULL.\n");
         return;
