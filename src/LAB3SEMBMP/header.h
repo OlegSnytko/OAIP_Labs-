@@ -33,7 +33,7 @@ typedef struct {
 void IsBmp(BMPHeader header);
 void Is24Pixel(BMPInfoHeader infoHeader);
 void BmpToNegative( unsigned char* imageData, int imageSize);
-void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, FILE* BMP, unsigned char* imageData, int imageSize);
+void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, FILE* BMP, const unsigned char* imageData, int imageSize);
 void BmpToGrayBlack(unsigned char* imageData, int imageSize);
 void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
 void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
