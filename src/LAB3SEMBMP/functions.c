@@ -12,22 +12,6 @@ void Is24Pixel(BMPInfoHeader infoHeader) {
     }
 }
 
-
-void validationFile(FILE* BMP, char* outFilename, unsigned char* mass) {
-    if (!BMP) {
-        printf("Failed to create file %s\n", outFilename);
-        free(mass);
-        return;
-    }
-}
-
-void allocateMemValid(unsigned const char* medianFilteredBMP) {
-    if (!medianFilteredBMP) {
-        printf("Memory allocation failed.\n");
-        return;
-    }
-}
-
 void validationParam(char* string, int* param, int low, int high){
     printf("%s", string);
     while(scanf_s("%d", param)!= 1 || getchar()!= '\n' || *param < low || *param > high){
