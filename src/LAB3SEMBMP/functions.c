@@ -21,7 +21,7 @@ void validationFile(const FILE* BMP, char* outFilename, unsigned char* mass) {
     }
 }
 
-void allocateMemValid(unsigned const char* medianFilteredBMP) {
+void allocateMemValid(const unsigned char* medianFilteredBMP) {
     if (!medianFilteredBMP) {
         printf("Memory allocation failed.\n");
         return;
