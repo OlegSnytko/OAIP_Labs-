@@ -1,7 +1,8 @@
 
+
 #ifndef LAB3SEMBMP_HEADER_H
 #define LAB3SEMBMP_HEADER_H
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -32,12 +33,13 @@ typedef struct {
 void IsBmp(BMPHeader header);
 void Is24Pixel(BMPInfoHeader infoHeader);
 void BmpToNegative( unsigned char* imageData, int imageSize);
-void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, const FILE* BMP, unsigned char* imageData, int imageSize);
+void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, FILE* BMP, unsigned char* imageData, int imageSize);
 void BmpToGrayBlack(unsigned char* imageData, int imageSize);
-void menu(unsigned char* imageData,int imageSize, const FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
+void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
 void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
 void gammaParam(double* gamma, char* string, double low, double high);
 void validationParam(char* string, int* param, int low, int high);
-void medianFilter(const unsigned char *imageData, BMPInfoHeader *infoHeader);
+void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader);
 
 #endif //LAB3SEMBMP_HEADER_H
+
