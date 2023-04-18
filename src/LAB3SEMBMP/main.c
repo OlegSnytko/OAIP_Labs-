@@ -30,8 +30,6 @@ int main() {
     unsigned char* imageData = (unsigned char*) malloc(imageSize * sizeof(unsigned char));
     fread(imageData, sizeof(unsigned char), imageSize, BMP);
 
-    fclose(BMP);
-
     menu(imageData, imageSize, BMP, infoHeader, header);
 
     fclose(BMP);
