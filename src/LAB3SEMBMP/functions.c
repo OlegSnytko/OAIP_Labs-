@@ -94,7 +94,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
             BmpToNegative(negativeImageData, imageSize);
 
             char outFilename[100] = "negative.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, negativeImageData, imageSize);
 
@@ -110,7 +110,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
             BmpToGrayBlack(grayImageData, imageSize);
 
             char outFilename[100] = "blackGray.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, grayImageData, imageSize);
 
@@ -128,7 +128,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
             gammaCorrection(gammaCorrectionBMP, imageSize, gamma);
 
             char outFilename[100] = "gammaCorrected.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, gammaCorrectionBMP, imageSize);
 
@@ -144,7 +144,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
             medianFilter(medianFiltered, &infoHeader);
 
             char outFilename[100] = "medianFiltered.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, medianFiltered, imageSize);
 
