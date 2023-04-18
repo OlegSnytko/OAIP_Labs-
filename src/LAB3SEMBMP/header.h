@@ -35,7 +35,7 @@ void Is24Pixel(BMPInfoHeader infoHeader);
 void BmpToNegative( unsigned char* imageData, int imageSize);
 void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, FILE* BMP, const unsigned char* imageData, int imageSize);
 void BmpToGrayBlack(unsigned char* imageData, int imageSize);
-void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
+void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
 void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
 void gammaParam(double* gamma, char* string, double low, double high);
 void validationParam(char* string, int* param, int low, int high);
