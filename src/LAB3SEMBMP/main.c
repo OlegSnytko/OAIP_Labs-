@@ -6,9 +6,10 @@ int main() {
     char fileName[100];
     printf("enter the name of file: ");
     scanf_s("%s", fileName);
-    FILE* BMP = fopen(fileName, "rb");
+    FILE* BMP;
+    fopen_s(&BMP ,fileName, "rb");
 
-    if(!(BMP)){
+    if(!BMP){
         printf("Error opening file.\n");
         return 0;
     }
