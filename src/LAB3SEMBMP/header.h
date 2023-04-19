@@ -37,7 +37,7 @@ void BmpToNegative( unsigned char* imageData, int imageSize);
 void WriteInBMP(BMPHeader header,  BMPInfoHeader infoHeader, FILE* BMP, const unsigned char* imageData, int imageSize);
 void BmpToGrayBlack(unsigned char* imageData, int imageSize);
 void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
-__attribute__((noreturn)) void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
+void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header);
 void gammaParam(double* gamma, char* string, double low, double high);
 void validationParam(char* string, int* param, int low, int high);
 void medianFilter(unsigned char *imageData, const BMPInfoHeader *infoHeader);
