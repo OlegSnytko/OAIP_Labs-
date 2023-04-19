@@ -154,7 +154,7 @@ void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader
 
         }
         else if (choice == 5) {
-            exit(0);
+            break;
         }
     }
 }
