@@ -5,5 +5,5 @@ set(CMAKE_C_STANDARD 99)
 
 
 
-add_executable(OAIP_Labs- src/LAB3SEMBMP/main.c src/LAB3SEMBMP/header.h src/LAB3SEMBMP/functions.c)
+add_executable(OAIP_Labs- src/LABA2Com/main.c src/LABA2Com/header.h src/LABA2Com/functions.c)
 
