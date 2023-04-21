@@ -55,6 +55,7 @@ int main() {
     fseek(f2, 0, SEEK_END);
     fclose(f3);
     remove("C:\\LABA2file\\f3.txt");
+    fclose(f2);
     printf("count = %d", count);
     printf("\nCompression completed.");
     return 0;
