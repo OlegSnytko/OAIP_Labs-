@@ -16,7 +16,7 @@ int isLetter(char symbol);
 int wordStart(char* string, int start);
 int wordFinish(const char* string, int finish);
 int  wordLength(char* string, int word);
-int amountWords(char* string);
+int amountWords(const char* string);
 Node* initNode();
 char* getWord(const char* string, int indStart);
 void meetingFrequencies(char* string, Node* head);
