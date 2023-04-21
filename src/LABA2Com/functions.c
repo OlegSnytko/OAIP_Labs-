@@ -100,8 +100,8 @@ Node** compressionDifference(Node* head, int* maxCompress){
     while(node1->next != NULL){
         node2 = node1->next;
         while (node2->next != NULL){
-            temp = ((node1->frequencies * wordLength(node1->word, 1) + (node2->frequencies * wordLength(node2->word, 1)) - (node2->frequencies * wordLength(node1->word, 1) + (node1->frequencies * wordLength(node2->word, 1))) -
-                    (wordLength(node1->word, 1) + wordLength(node2->word, 1) + 2)));
+            temp = (node1->frequencies * wordLength(node1->word, 1) + (node2->frequencies * wordLength(node2->word, 1)) - (node2->frequencies * wordLength(node1->word, 1) + (node1->frequencies * wordLength(node2->word, 1))) -
+                    (wordLength(node1->word, 1) + wordLength(node2->word, 1) + 2));
             if(temp > *maxCompress){
                 *maxCompress = temp;
                 indI = node1;
@@ -132,7 +132,7 @@ char* getWord(const char* string, int indStart){
 
 //oleg is wordlen wordlen wmi wordlen wmi wordlen oleg wordlen wordlen mmmmmmmmmm mmmmmmmmmm gogogog gogogog.
 
-void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
+void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) {
     char buffer[2000];
     char *word;
     rewind(f2);
