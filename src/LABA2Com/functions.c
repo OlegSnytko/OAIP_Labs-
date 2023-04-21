@@ -12,7 +12,7 @@ int wordStart(char* string, int word) {
     return i + 1;
 }
 
-int wordFinish(char* string, int word){
+int wordFinish(const char* string, int word){
     int count = 0;
     for(int i = 0; string[i] != '\0'; i++){
         if((isLetter(string[i]) == 1) && (isLetter(string[i + 1]) == 0)){
