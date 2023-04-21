@@ -134,7 +134,7 @@ char* getWord(const char* string, int indStart){
 
 void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) {
     char buffer[2000];
-    char *word;
+    const char *word;
     rewind(f2);
     freopen("C:\\LABA2file\\f3.txt","w+",f3);
     while (fgets(buffer, 2000, f2) != NULL) {
