@@ -14,7 +14,7 @@ typedef struct Node{
 
 int isLetter(char symbol);
 int wordStart(char* string, int start);
-int wordFinish(char* string, int finish);
+int wordFinish(const char* string, int finish);
 int  wordLength(char* string, int word);
 int amountWords(char* string);
 Node* initNode();
