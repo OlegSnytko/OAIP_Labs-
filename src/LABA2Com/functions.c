@@ -157,6 +157,5 @@ void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
         }
     }
     rewind(f2);
-    free(word);
     rewind(f3);
 }
