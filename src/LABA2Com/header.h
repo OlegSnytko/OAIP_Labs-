@@ -13,7 +13,7 @@ typedef struct Node{
 }Node;
 
 int isLetter(char symbol);
-int wordStart(char* string, int start);
+int wordStart(const char* string, int start);
 int wordFinish(const char* string, int finish);
 int  wordLength(char* string, int word);
 int amountWords(const char* string);
