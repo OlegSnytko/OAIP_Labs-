@@ -6,7 +6,7 @@ int isLetter(char symbol){
     return ((symbol >= 'A' && symbol <= 'Z') || (symbol >= 'a' && symbol <= 'z'));
 }
 
-int wordStart(char* string, int word) {
+int wordStart(const char* string, int word) {
     int i;
     for (i = wordFinish(string, word); isLetter(string[i]); i--);
     return i + 1;
