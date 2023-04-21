@@ -56,6 +56,8 @@ int main() {
     fclose(f3);
     remove("C:\\LABA2file\\f3.txt");
     fclose(f2);
+    fclose(f1);
+    fclose(dictionary);
     printf("count = %d", count);
     printf("\nCompression completed.");
     return 0;
