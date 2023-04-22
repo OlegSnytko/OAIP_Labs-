@@ -19,7 +19,7 @@ int  wordLength(const char* string, int word);
 int amountWords(const char* string);
 Node* initNode();
 char* getWord(const char* string, int indStart);
-void meetingFrequencies(char* string, Node* head);
+void meetingFrequencies(const char* string, Node* head);
 Node** compressionDifference(Node* head, int* maxCompress);
 void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin);
 
