@@ -41,7 +41,7 @@ int amountWords(const char* string) {
     return count;
 }
 
-void meetingFrequencies(char* string, Node* head){
+void meetingFrequencies(const char* string, Node* head){
     Node* temp;
     int count;
     char* buffer = NULL;
