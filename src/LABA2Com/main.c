@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include "header.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 int main() {
-    FILE *f2 = fopen("C:\\LABA2file\\f2.txt", "w+");
-    FILE *f1 = fopen("C:\\LABA2file\\f1.txt", "r+");
-    FILE *f3 = fopen("C:\\LABA2file\\f3.txt", "w+");
-    FILE *dictionary = fopen("C:\\LABA2file\\dictionary.txt", "w+");
+    FILE *f2;
+    fopen_s(&f2,"C:\\LABA2file\\f2.txt", "w+");
+    FILE *f1;
+    fopen_s(&f1,"C:\\LABA2file\\f1.txt", "r+");
+    FILE *f3;
+    fopen_s(&f3,"C:\\LABA2file\\f3.txt", "w+");
+    FILE *dictionary;
+    fopen_s(&dictionary,"C:\\LABA2file\\dictionary.txt", "w+");
 
     int count = 0;
     char string[2000];
