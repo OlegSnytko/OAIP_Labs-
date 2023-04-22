@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-
+#define _CRT_SECURE_NO_WARNINGS
 typedef struct Node{
     char* word;
     int frequencies;
