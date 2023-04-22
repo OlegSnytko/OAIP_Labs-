@@ -25,7 +25,7 @@ int wordFinish(const char* string, int word){
     return -1;
 }
 
-int  wordLength(char* string, int word){
+int  wordLength(const char* string, int word){
     int length;
     length = wordFinish(string, word) - wordStart(string, word);
     return length + 1;
