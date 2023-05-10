@@ -1,0 +1,71 @@
+Female?
+Is she alive?
+Does she specialize in assaults?
+Does she have the ability to move through space?
+RAVE
+$
+$
+HORIZON
+$
+$
+Does she specialize in Support?
+Field doctor?
+LAIFA
+$
+$
+LOBA
+$
+$
+Did she served in special forces (S.W.A.T)?
+BANGALORE
+$
+$
+CATALYST
+$
+$
+PATHFINDER
+$
+$
+Is he alive?
+Does he specialize in recon?
+Does he use an animal to spy?
+Uses the crow to search?
+BLOODHOUND
+$
+$
+VANTAGE
+$
+$
+Does he use some devices(excluding sensors or animals)?
+CRYPTO
+$
+$
+Does he use different kinds of sensors?
+CEER
+$
+$
+OCTANE
+$
+$
+Does he have a relic?
+An expert in the Holographic Trickster?
+MIRAGE
+$
+$
+NEWCASTLE
+$
+$
+Puts gas traps for defense?
+CAUSTIC
+$
+$
+GIBRALTAR
+$
+$
+Evil?
+REVENANT
+$
+$
+PATHFINDER
+$
+$

@@ -1,0 +1,3 @@
+C:/LAB4SEM2/cmake-build-debug/CMakeFiles/LAB4SEM2.dir
+C:/LAB4SEM2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/LAB4SEM2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
