@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "LABA2Com",
+					"name" : "LAB4SEM2",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "LABA2Com::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LABA2Com-Debug-4d2b666d11ac75d9cb57.json",
-					"name" : "LABA2Com",
+					"id" : "LAB4SEM2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LAB4SEM2-Debug-509d9db5e1f290f30313.json",
+					"name" : "LAB4SEM2",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/LABA2Com/cmake-build-debug",
-		"source" : "C:/LABA2Com"
+		"build" : "C:/LAB4SEM2/cmake-build-debug",
+		"source" : "C:/LAB4SEM2"
 	},
 	"version" : 
 	{

@@ -44,7 +44,7 @@ int amountWords(char* string) {
 void meetingFrequencies(char* string, Node* head){
     Node* temp;
     int count;
-    char* buffer = NULL;
+    char* buffer;
     for(int m = 1; m <= amountWords(string); m++) {
         count = 0;
         buffer = (char*) malloc((wordLength(string, m) + 1) * sizeof(char));
@@ -72,6 +72,7 @@ void meetingFrequencies(char* string, Node* head){
             temp->next = initNode();
         }
     }
+
 }
 
 Node* initNode(){
@@ -82,12 +83,12 @@ Node* initNode(){
     return node;
 }
 
-void printList(Node* list) {
+/*void printList(Node* list) {
     while (list->next != NULL) {
         printf("\n%s, %d", list->word, list->frequencies);
         list = list->next;
     }
-}
+}*/
 
 Node** compressionDifference(Node* head, int* maxCompress){
     Node* node1 = head;
@@ -134,7 +135,7 @@ char* getWord(const char* string, int indStart){
 
 void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
     char buffer[2000];
-    char *word;
+    char *word = NULL;
     rewind(f2);
     freopen("C:\\LABA2file\\f3.txt","w+",f3);
     while (fgets(buffer, 2000, f2) != NULL) {
@@ -154,8 +155,26 @@ void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
             } else {
                 fputc(buffer[i], f3);
             }
+
+            //cycle1(f2, f3, wordMax, wordMin, word, buffer, i);
         }
     }
     rewind(f2);
     rewind(f3);
 }
+
+
+/*void cycle1(FILE* f3, Node* wordMax, Node* wordMin, char* word, char* buffer, int i){
+    if (isLetter(buffer[i]) == 1) {
+        word = getWord(buffer, i);
+        if (strcmp(wordMin->word, word) == 0) {
+            fputs(wordMax->word, f3);
+        } else if (strcmp(wordMax->word, word) == 0) {
+            fputs(wordMin->word, f3);
+        } else {
+            fputs(word, f3);
+        }
+    }else {
+        fputc(buffer[i], f3);
+    }
+}*/

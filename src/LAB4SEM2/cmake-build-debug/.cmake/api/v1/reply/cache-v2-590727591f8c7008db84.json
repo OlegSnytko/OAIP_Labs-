@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/LABA2Com/cmake-build-debug"
+			"value" : "c:/LAB4SEM2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/LABA2Com"
+			"value" : "C:/LAB4SEM2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/LABA2Com"
+			"value" : "C:/Program Files (x86)/LAB4SEM2"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -707,7 +707,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "LABA2Com"
+			"value" : "LAB4SEM2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1086,7 +1086,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "LABA2Com_BINARY_DIR",
+			"name" : "LAB4SEM2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1095,10 +1095,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/LABA2Com/cmake-build-debug"
+			"value" : "C:/LAB4SEM2/cmake-build-debug"
 		},
 		{
-			"name" : "LABA2Com_IS_TOP_LEVEL",
+			"name" : "LAB4SEM2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1110,7 +1110,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "LABA2Com_SOURCE_DIR",
+			"name" : "LAB4SEM2_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/LABA2Com"
+			"value" : "C:/LAB4SEM2"
 		}
 	],
 	"kind" : "cache",

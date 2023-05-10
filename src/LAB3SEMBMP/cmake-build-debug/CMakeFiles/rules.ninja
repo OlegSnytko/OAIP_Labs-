@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\olegs\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SC:\OAIP_Labs-\LABS(2-3)\LAB3SEMBMP -BC:\OAIP_Labs-\LABS(2-3)\LAB3SEMBMP\cmake-build-debug
+  command = C:\Users\olegs\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SC:\OAIP_Labs-\src\LAB3SEMBMP -BC:\OAIP_Labs-\src\LAB3SEMBMP\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

@@ -429,8 +429,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug",
-		"source" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP"
+		"build" : "C:/OAIP_Labs-/src/LAB3SEMBMP/cmake-build-debug",
+		"source" : "C:/OAIP_Labs-/src/LAB3SEMBMP"
 	},
 	"version" : 
 	{

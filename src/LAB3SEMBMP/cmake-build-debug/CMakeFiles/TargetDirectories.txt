@@ -1,3 +1,3 @@
-C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug/CMakeFiles/LAB3SEMBMP.dir
-C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/OAIP_Labs-/src/LAB3SEMBMP/cmake-build-debug/CMakeFiles/LAB3SEMBMP.dir
+C:/OAIP_Labs-/src/LAB3SEMBMP/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/OAIP_Labs-/src/LAB3SEMBMP/cmake-build-debug/CMakeFiles/rebuild_cache.dir

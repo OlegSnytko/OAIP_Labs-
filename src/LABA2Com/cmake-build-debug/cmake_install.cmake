@@ -1,4 +1,4 @@
-# Install script for directory: C:/LABA2Com
+# Install script for directory: C:/OAIP_Labs-/src/LABA2Com
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/LABA2Com/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/OAIP_Labs-/src/LABA2Com/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

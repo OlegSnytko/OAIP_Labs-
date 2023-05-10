@@ -22,5 +22,5 @@ char* getWord(const char* string, int indStart);
 void meetingFrequencies(char* string, Node* head);
 Node** compressionDifference(Node* head, int* maxCompress);
 void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin);
-
+void cycle1(FILE* f3, Node* wordMax, Node* wordMin, char* word, char* buffer, int i);
 #endif //LABA2COM_HEADER_H

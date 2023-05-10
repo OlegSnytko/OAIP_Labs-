@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug"
+			"value" : "c:/OAIP_Labs-/src/LABA2Com/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP"
+			"value" : "C:/OAIP_Labs-/src/LABA2Com"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/LAB3SEMBMP"
+			"value" : "C:/Program Files (x86)/LABA2Com"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -707,7 +707,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "LAB3SEMBMP"
+			"value" : "LABA2Com"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1086,7 +1086,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "LAB3SEMBMP_BINARY_DIR",
+			"name" : "LABA2Com_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1095,10 +1095,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug"
+			"value" : "C:/OAIP_Labs-/src/LABA2Com/cmake-build-debug"
 		},
 		{
-			"name" : "LAB3SEMBMP_IS_TOP_LEVEL",
+			"name" : "LABA2Com_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1110,7 +1110,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "LAB3SEMBMP_SOURCE_DIR",
+			"name" : "LABA2Com_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP"
+			"value" : "C:/OAIP_Labs-/src/LABA2Com"
 		}
 	],
 	"kind" : "cache",

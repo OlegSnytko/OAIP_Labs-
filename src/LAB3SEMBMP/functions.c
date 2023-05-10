@@ -1,5 +1,6 @@
 #include "header.h"
 
+
 void IsBmp(BMPHeader header) {
     if (header.type[0] != 'B' || header.type[1] != 'M') {
         printf("File is not BMP.\n");
@@ -13,6 +14,7 @@ void Is24Pixel(BMPInfoHeader infoHeader) {
 }
 
 
+/*
 void validationFile(FILE* BMP, char* outFilename, unsigned char* mass) {
     if (!BMP) {
         printf("Failed to create file %s\n", outFilename);
@@ -27,6 +29,7 @@ void allocateMemValid(unsigned const char* medianFilteredBMP) {
         return;
     }
 }
+*/
 
 void validationParam(char* string, int* param, int low, int high){
     printf("%s", string);
@@ -67,9 +70,11 @@ void BmpToNegative(unsigned char *imageData, int imageSize) {
 
 void BmpToGrayBlack(unsigned char *imageData, int imageSize) {
 
-    for (int i = 0; i < imageSize; i ++) {
+    for (int i = 0; i < imageSize; i +=3) {
         unsigned char gray = (unsigned char) ((float) imageData[i] * 0.3 + (float) imageData[i + 1] * 0.5 + (float) imageData[i + 2] * 0.1);
         imageData[i] = gray;
+        imageData[i+1] = gray;
+        imageData[i+2]= gray;
     }
 }
 
@@ -110,7 +115,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             BmpToNegative(negativeImageData, imageSize);
 
             char outFilename[100] = "negative.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, negativeImageData, imageSize);
 
@@ -169,13 +174,13 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             free(medianFiltered);
 
         }
-        if (choice == 5) {
-            exit(0);
+        else if (choice == 5) {
+            break;
         }
     }
 }
 
-    void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
+void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
 
         int width = infoHeader->width;
         int height = infoHeader->height;
@@ -186,29 +191,38 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
 
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
-                for (int dy = -1; dy <= 1; dy++) {
-                    for (int dx = -1; dx <= 1; dx++) {
-                        int yy = y + dy;
-                        int xx = x + dx;
-                        if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-                            int index = ((yy * width) + xx) * bytesPerPixel;
-                            sumRed += buffer[index];
-                            sumGreen += buffer[index + 1];
-                            sumBlue += buffer[index + 2];
-                            count++;
-                        }
-                    }
-                }
-
-                int index = ((y * width) + x) * bytesPerPixel;
-                imageData[index] = sumRed / count;
-                imageData[index + 1] = sumGreen / count;
-                imageData[index + 2] = sumBlue / count;
+               cycles(x, y, infoHeader, imageData, buffer);
             }
         }
         free(buffer);
-    }
+}
+
+    void cycles(int x, int y, BMPInfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer){
+
+        int width = infoHeader->width;
+        int height = infoHeader->height;
+        int bytesPerPixel = infoHeader->bitsPerPixel / 8;
+
+        int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
+        for (int dy = -1; dy <= 1; dy++) {
+            for (int dx = -1; dx <= 1; dx++) {
+                int yy = y + dy;
+                int xx = x + dx;
+                if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
+                    int index = ((yy * width) + xx) * bytesPerPixel;
+                    sumRed += buffer[index];
+                    sumGreen += buffer[index + 1];
+                    sumBlue += buffer[index + 2];
+                    count++;
+                }
+            }
+        }
+        int index = ((y * width) + x) * bytesPerPixel;
+        imageData[index] = (unsigned char)(sumRed / count);
+        imageData[index + 1] = (unsigned char)(sumGreen / count);
+        imageData[index + 2] = (unsigned char)(sumBlue / count);
+}
+
 
 
 

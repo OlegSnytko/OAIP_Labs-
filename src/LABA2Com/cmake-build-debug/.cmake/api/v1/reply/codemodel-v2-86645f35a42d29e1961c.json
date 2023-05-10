@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "LAB3SEMBMP",
+					"name" : "LABA2Com",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "LAB3SEMBMP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LAB3SEMBMP-Debug-38454f0874013d3e17d4.json",
-					"name" : "LAB3SEMBMP",
+					"id" : "LABA2Com::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LABA2Com-Debug-4d2b666d11ac75d9cb57.json",
+					"name" : "LABA2Com",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP/cmake-build-debug",
-		"source" : "C:/OAIP_Labs-/LABS(2-3)/LAB3SEMBMP"
+		"build" : "C:/OAIP_Labs-/src/LABA2Com/cmake-build-debug",
+		"source" : "C:/OAIP_Labs-/src/LABA2Com"
 	},
 	"version" : 
 	{
