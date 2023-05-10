@@ -13,6 +13,7 @@ void Is24Pixel(BMPInfoHeader infoHeader) {
     }
 }
 
+<<<<<<< HEAD
 
 /*
 void validationFile(FILE* BMP, char* outFilename, unsigned char* mass) {
@@ -31,6 +32,8 @@ void allocateMemValid(unsigned const char* medianFilteredBMP) {
 }
 */
 
+=======
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
 void validationParam(char* string, int* param, int low, int high){
     printf("%s", string);
     while(scanf_s("%d", param)!= 1 || getchar()!= '\n' || *param < low || *param > high){
@@ -45,7 +48,7 @@ void validationParam(char* string, int* param, int low, int high){
     }
 }
 
-void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, unsigned char *imageData, int imageSize) {
+void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, const unsigned char *imageData, int imageSize) {
     if (BMP == NULL) {
         printf("Error: BMP file pointer is NULL.\n");
         return;
@@ -95,7 +98,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
 
 }
 
-void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
+void menu(const unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoHeader, BMPHeader header) {
 
     while (1) {
         double gamma;
@@ -131,7 +134,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             BmpToGrayBlack(grayImageData, imageSize);
 
             char outFilename[100] = "blackGray.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, grayImageData, imageSize);
 
@@ -149,7 +152,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             gammaCorrection(gammaCorrectionBMP, imageSize, gamma);
 
             char outFilename[100] = "gammaCorrected.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, gammaCorrectionBMP, imageSize);
 
@@ -165,7 +168,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             medianFilter(medianFiltered, &infoHeader);
 
             char outFilename[100] = "medianFiltered.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP ,outFilename, "wb");
 
             WriteInBMP(header, infoHeader, BMP, medianFiltered, imageSize);
 
@@ -196,6 +199,7 @@ void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
         }
         free(buffer);
 }
+<<<<<<< HEAD
 
     void cycles(int x, int y, BMPInfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer){
 
@@ -224,6 +228,35 @@ void medianFilter(unsigned char *imageData, BMPInfoHeader *infoHeader) {
 }
 
 
+=======
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
 
+    void cycles(int x, int y, const BMPInfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer){
 
+        int width = infoHeader->width;
+        int height = infoHeader->height;
+        int bytesPerPixel = infoHeader->bitsPerPixel / 8;
 
+        int sumRed = 0;
+        int sumGreen = 0;
+        int sumBlue = 0;
+        int count = 0;
+        
+        for (int dy = -1; dy <= 1; dy++) {
+            for (int dx = -1; dx <= 1; dx++) {
+                int yy = y + dy;
+                int xx = x + dx;
+                if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
+                    int index = ((yy * width) + xx) * bytesPerPixel;
+                    sumRed += buffer[index];
+                    sumGreen += buffer[index + 1];
+                    sumBlue += buffer[index + 2];
+                    count++;
+                }
+            }
+        }
+        int index = ((y * width) + x) * bytesPerPixel;
+        imageData[index] = (unsigned char)(sumRed / count);
+        imageData[index + 1] = (unsigned char)(sumGreen / count);
+        imageData[index + 2] = (unsigned char)(sumBlue / count);
+}

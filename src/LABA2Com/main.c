@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "header.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 int main() {
     FILE *f2;
@@ -60,6 +61,11 @@ int main() {
     fclose(f3);
     remove("C:\\LABA2file\\f3.txt");
     fclose(f2);
+<<<<<<< HEAD
+=======
+    fclose(f1);
+    fclose(dictionary);
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
     printf("count = %d", count);
     printf("\nCompression completed.");
     return 0;

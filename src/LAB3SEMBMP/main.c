@@ -1,13 +1,19 @@
 
+
 #include "header.h"
 int main() {
 
     char fileName[100];
     printf("enter the name of file: ");
     scanf_s("%s", fileName);
+<<<<<<< HEAD
     FILE* BMP = fopen(fileName, "rb");
+=======
+    FILE* BMP;
+    fopen_s(&BMP ,fileName, "rb");
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
 
-    if(!(BMP)){
+    if(!BMP){
         printf("Error opening file.\n");
         return 0;
     }
@@ -36,4 +42,8 @@ int main() {
     free(imageData);
 
     return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986

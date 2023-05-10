@@ -6,13 +6,13 @@ int isLetter(char symbol){
     return ((symbol >= 'A' && symbol <= 'Z') || (symbol >= 'a' && symbol <= 'z'));
 }
 
-int wordStart(char* string, int word) {
+int wordStart(const char* string, int word) {
     int i;
     for (i = wordFinish(string, word); isLetter(string[i]); i--);
     return i + 1;
 }
 
-int wordFinish(char* string, int word){
+int wordFinish(const char* string, int word){
     int count = 0;
     for(int i = 0; string[i] != '\0'; i++){
         if((isLetter(string[i]) == 1) && (isLetter(string[i + 1]) == 0)){
@@ -25,13 +25,13 @@ int wordFinish(char* string, int word){
     return -1;
 }
 
-int  wordLength(char* string, int word){
+int  wordLength(const char* string, int word){
     int length;
     length = wordFinish(string, word) - wordStart(string, word);
     return length + 1;
 }
 
-int amountWords(char* string) {
+int amountWords(const char* string) {
     int count = 0;
     for(int i = 0; string[i] != '\0'; i++) {
         if((isLetter(string[i]) == 1) && (isLetter(string[i + 1]) == 0)){
@@ -41,7 +41,7 @@ int amountWords(char* string) {
     return count;
 }
 
-void meetingFrequencies(char* string, Node* head){
+void meetingFrequencies(const char* string, Node* head){
     Node* temp;
     int count;
     char* buffer;
@@ -101,8 +101,8 @@ Node** compressionDifference(Node* head, int* maxCompress){
     while(node1->next != NULL){
         node2 = node1->next;
         while (node2->next != NULL){
-            temp = ((node1->frequencies * wordLength(node1->word, 1) + (node2->frequencies * wordLength(node2->word, 1)) - (node2->frequencies * wordLength(node1->word, 1) + (node1->frequencies * wordLength(node2->word, 1))) -
-                    (wordLength(node1->word, 1) + wordLength(node2->word, 1) + 2)));
+            temp = (node1->frequencies * wordLength(node1->word, 1) + (node2->frequencies * wordLength(node2->word, 1)) - (node2->frequencies * wordLength(node1->word, 1) + (node1->frequencies * wordLength(node2->word, 1))) -
+                    (wordLength(node1->word, 1) + wordLength(node2->word, 1) + 2));
             if(temp > *maxCompress){
                 *maxCompress = temp;
                 indI = node1;
@@ -133,9 +133,13 @@ char* getWord(const char* string, int indStart){
 
 //oleg is wordlen wordlen wmi wordlen wmi wordlen oleg wordlen wordlen mmmmmmmmmm mmmmmmmmmm gogogog gogogog.
 
-void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
+void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) {
     char buffer[2000];
+<<<<<<< HEAD
     char *word = NULL;
+=======
+    const char *word;
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
     rewind(f2);
     freopen("C:\\LABA2file\\f3.txt","w+",f3);
     while (fgets(buffer, 2000, f2) != NULL) {
@@ -162,6 +166,7 @@ void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
     rewind(f2);
     rewind(f3);
 }
+<<<<<<< HEAD
 
 
 /*void cycle1(FILE* f3, Node* wordMax, Node* wordMin, char* word, char* buffer, int i){
@@ -178,3 +183,5 @@ void replaceWords(FILE* f2, FILE* f3, Node* wordMax, Node* wordMin) {
         fputc(buffer[i], f3);
     }
 }*/
+=======
+>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
