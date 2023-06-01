@@ -1,0 +1,4 @@
+lms.bsuir.by    IN    A    192.168.251.23
+lms2.example.by    IN    A    192.168.1.1
+Ussfdsf.com    IN    A    192.143.16.16
+sfdsf.com    IN    A    192.168.13.54
