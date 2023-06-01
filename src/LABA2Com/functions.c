@@ -135,11 +135,11 @@ char* getWord(const char* string, int indStart){
 
 void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) {
     char buffer[2000];
-<<<<<<< HEAD
+//<<<<<<< HEAD
     char *word = NULL;
-=======
+//=======
     const char *word;
->>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
+//>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
     rewind(f2);
     freopen("C:\\LABA2file\\f3.txt","w+",f3);
     while (fgets(buffer, 2000, f2) != NULL) {
@@ -166,7 +166,7 @@ void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) 
     rewind(f2);
     rewind(f3);
 }
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
 /*void cycle1(FILE* f3, Node* wordMax, Node* wordMin, char* word, char* buffer, int i){
@@ -182,6 +182,6 @@ void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) 
     }else {
         fputc(buffer[i], f3);
     }
-}*/
-=======
->>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
+//}*/
+//=======
+//>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986

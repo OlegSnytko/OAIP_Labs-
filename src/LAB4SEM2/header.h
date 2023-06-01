@@ -5,7 +5,6 @@
 #include <string.h>
 #include <time.h>
 #include <windows.h>
-#include <unistd.h>
 #define STRING 256
 #define TIMELIMIT 6000
 #define MUSICTIME 5000
@@ -24,13 +23,14 @@ void guessObject(treeNode* node);
 treeNode* createNode(char* input);
 treeNode* readData(FILE* dataBase);
 void printTree(treeNode* root);
-void LoadTheDataBase(FILE* file, treeNode* node);
+void loadTheDataBase(FILE* file, treeNode* node);
 
 //Optimization functions.
 void scanString(char** string);
 void validationChoice(char* string, int* choice, int leftEdge, int rightEdge);
 void freeTreeNode(treeNode* node);
-void getLen(int length, char* object);
+//void getLen(int length, char* object);
+void getLen(int length, char** object);
 void freeNewObjects(char* answer, char* newObject, char* newAnswer, char* newQuestion);
 void timeLoad();
 //treeNode* getLifFromTree(treeNode* node);

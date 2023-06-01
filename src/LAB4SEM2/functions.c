@@ -50,14 +50,14 @@ treeNode* readData(FILE* dataBase){
 }
 
 
-void LoadTheDataBase(FILE* file, treeNode* node){
+void loadTheDataBase(FILE* file, treeNode* node){
     if(node == NULL){
         fprintf(file, "$\n");
         return;
     }
     fprintf(file, "%s", node->question);
-    LoadTheDataBase(file, node->left);
-    LoadTheDataBase(file, node->right);
+    loadTheDataBase(file, node->left);
+    loadTheDataBase(file, node->right);
 
 }
 
@@ -83,13 +83,18 @@ void validationChoice(char* string, int* choice, int leftEdge, int rightEdge){
 }
 
 
-void getLen(int length, char* object){
+/*void getLen(int length, char* object){
     for (length = 0; object[length] != '\0'; length++);
     object = (char*) realloc(object, (length + 2) * sizeof(char));
     object[length] = '\n';
     object[length + 1] = '\0';
+}*/
+void getLen(int length, char** object) {
+    for (length = 0; (*object)[length] != '\0'; length++);
+    *object = (char*) realloc(*object, (length + 2) * sizeof(char));
+    (*object)[length] = '\n';
+    (*object)[length + 1] = '\0';
 }
-
 
 void freeNewObjects(char* answer, char* newObject, char* newAnswer, char* newQuestion){
     free(answer);
@@ -101,6 +106,7 @@ void freeNewObjects(char* answer, char* newObject, char* newAnswer, char* newQue
 
 void guessObject(treeNode* node){
     char* answer = NULL;
+    scanf_s("%s",&answer);
     printf("%s", node->question);
     scanString(&answer);
 
@@ -141,12 +147,12 @@ void guessObject(treeNode* node){
             printf("Who/What was the object you were thinking of?\n");
             char* newObject = NULL;
             scanString(&newObject);
-            getLen(length, newObject);
+            getLen(length, &newObject);
 
             printf("Make the yes/no question that is distinctive %s from %s?\n", newObject, node->question);
             char* newQuestion = NULL;
             scanString(&newQuestion);
-            getLen(length, newQuestion);
+            getLen(length, &newQuestion);
 
             printf("What is the answer to the question for %s? (yes/no)\n", newObject);
             char* newAnswer = NULL;
@@ -201,8 +207,8 @@ void menu(treeNode* node){
         validationChoice("Choose the option:\n", &choice, 1, 2);
 
         if (choice == 1) {
-            timeLoad();
             PlaySound(TEXT("start.wav"), NULL, SND_ASYNC | SND_FILENAME);
+            timeLoad();
             Sleep(MUSICTIME);
             PlaySound(NULL, NULL, 0);
 
@@ -214,27 +220,4 @@ void menu(treeNode* node){
             exit(0);
         }
 }
-
-
-
-
-
-/*treeNode* getLifFromTree(treeNode* node){
-    if(node == NULL){
-        return NULL;
-    }
-    if(node->object != NULL){
-        return node;
-    }
-    treeNode* getLeftLifRes = getLifFromTree(node->left);
-    if(getLeftLifRes != NULL){
-        return getLeftLifRes;
-    }
-
-    treeNode* getRightLifRes = getLifFromTree(node->right);
-    if(getRightLifRes != NULL){
-        return getRightLifRes;
-    }
-    return NULL;
-}*/
 
