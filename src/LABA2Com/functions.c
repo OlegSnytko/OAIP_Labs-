@@ -138,7 +138,7 @@ void replaceWords(FILE* f2, FILE* f3, const Node* wordMax, const Node* wordMin) 
 //<<<<<<< HEAD
     char *word = NULL;
 //=======
-    const char *word;
+  //  const char *word;
 //>>>>>>> 255a3d4bf78f4eb1b128ad652f86268c03dd5986
     rewind(f2);
     freopen("C:\\LABA2file\\f3.txt","w+",f3);
